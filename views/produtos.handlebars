@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="/public/css/vendas.css">
+<link rel="stylesheet" href="/public/media/media.css">
+
+
+<section>
+  <div class="backButton">
+    <a href="/adm">< Voltar</a>
+  </div>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ID do Produto</th>
+        <th>Descrição</th>
+        <th>Valor</th>
+        <th>Editar</th>
+        <th>Deletar</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each produtos}}
+        <tr>
+            <td>{{dataValues.id}}</td>
+            <td>{{dataValues.descricao}}</td>
+            <td>{{dataValues.valor}}</td>
+            <td>
+                <a href="/adm/produtos/editar_produto/{{dataValues.id}}">&#9999;</a>
+            </td>
+            <td>
+                <a href="/adm/produtos/deletar_produto/{{dataValues.id}}">&#128465;</a>
+            </td>
+        </tr> 
+    {{/each}}
+    </tbody>
+  </table>
+
+  <div class="novaVendaButton">
+    <a href="/adm/produtos/novoProduto">Novo Produto</a>
+  </div>
+</section>
+
+

@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/public/css/vendas.css">
+<link rel="stylesheet" href="/public/media/media.css">
+
+
+<section>
+  <div class="backButton">
+    <a href="/adm">< Voltar</a>
+  </div>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ID do Cliente</th>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Email</th>
+        <th>Editar</th>
+        <th>Deletar</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each clientes}}
+        <tr>
+            <td>{{dataValues.id}}</td>
+            <td>{{dataValues.nome}}</td>
+            <td>{{dataValues.cpf}}</td>
+            <td>{{dataValues.email}}</td>
+            <td>
+                <a href="/adm/clientes/editar_cliente/{{dataValues.id}}">&#9999;</a>
+            </td>
+            <td>
+                <a href="/adm/clientes/deletar_cliente/{{dataValues.id}}">&#128465;</a>
+            </td>
+        </tr> 
+    {{/each}}
+    </tbody>
+  </table>
+
+  <div class="novaVendaButton">
+    <a href="/adm/clientes/novoCliente">Cadastrar Cliente</a>
+  </div>
+</section>
+
+

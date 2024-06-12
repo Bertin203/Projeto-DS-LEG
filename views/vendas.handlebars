@@ -1,0 +1,47 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/public/css/vendas.css">
+<link rel="stylesheet" href="/public/media/media.css">
+
+
+<section>
+  <div class="backButton">
+    <a href="/adm">< Voltar</a>
+  </div>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ID da Venda</th>
+        <th>Data</th>
+        <th>ID do Cliente</th>
+        <th>ID do Funcionário</th>
+        <th>Editar</th>
+        <th>Deletar</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each vendas}}
+        <tr>
+            <td>{{dataValues.id}}</td>
+            <td>{{dataValues.data}}</td>
+            <td>{{dataValues.id_cliente}}</td>
+            <td>{{dataValues.id_funcionario}}</td>
+            <td>
+                <a href="/adm/vendas/editar_venda/{{dataValues.id}}">&#9999;</a>
+            </td>
+            <td>
+                <a href="/adm/vendas/deletar_venda/{{dataValues.id}}">&#128465;</a>
+            </td>         
+        </tr> 
+    {{/each}}
+    </tbody>
+  </table>
+
+  <div class="novaVendaButton">
+    <a href="/adm/vendas/novaVenda">Nova Venda</a>
+  </div>
+</section>
+
+

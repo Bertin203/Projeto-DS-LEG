@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/public/css/novoProduto.css">
+<link rel="stylesheet" href="/public/media/media.css">
+
+
+<form action="/adm/produtos/novoProduto" method="post">
+  <div class="form-group">
+    <label for="email">ID</label>
+    <input type="text" class="form-control" id="id" name="id" value="{{produto.dataValues.id}} ">
+  </div>
+  <div class="form-group">
+    <label for="descricao">Descrição</label>
+    <input type="text" class="form-control" placeholder="Informe a descrição do produto" id="descricao" name="descricao" value="{{produto.dataValues.descricao}}">
+  </div>
+  <div class="form-group">
+    <label for="valor">Valor</label>
+    <input type="text" class="form-control" placeholder="Informe o valor do produto" id="valor" name="valor" value="{{produto.dataValues.valor}}">
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+

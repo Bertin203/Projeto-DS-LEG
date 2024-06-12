@@ -1,0 +1,25 @@
+Cliente
+	id (pk)
+	nome
+	cpf
+	e-mail
+
+Funcionário
+	id (pk)
+	nome
+	
+Venda
+	id (pk)
+	data
+	id_cliente (fk)
+	id_funcionario (fk)
+	
+Venda_has_produto
+	id_venda (fk)
+	id_produto (fk)
+
+Produtos
+	id (pk)
+	descricao
+	valor
+	

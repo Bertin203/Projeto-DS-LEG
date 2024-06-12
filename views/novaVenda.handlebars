@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/public/css/novaVenda.css">
+<link rel="stylesheet" href="/public/media/media.css">
+
+
+<form action="/adm/vendas/novaVenda" method="post">
+  <div class="form-group">
+    <label for="email">ID</label>
+    <input type="text" class="form-control" id="id" name="id" value="{{vendas.dataValues.id}} ">
+  </div>
+  <div class="form-group">
+    <label for="data">Data</label>
+    <input type="text" class="form-control" placeholder="Informe a data da venda" id="data" name="data" value="{{venda.dataValues.data}}">
+  </div>
+  <div class="form-group">
+    <label for="id_cliente">ID do Cliente</label>
+    <input type="text" class="form-control" placeholder="Informe o ID do Cliente" id="id_cliente" name="id_cliente" value="{{venda.dataValues.id_cliente}}">
+  </div>
+  <div class="form-group">
+    <label for="id_cliente">ID do Funcionário</label>
+    <input type="text" class="form-control" placeholder="Informe o ID do Funcionário" id="id_funcionario" name="id_funcionario" value="{{venda.dataValues.id_funcionario}}">
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+

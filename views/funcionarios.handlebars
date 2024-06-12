@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/public/css/vendas.css">
+<link rel="stylesheet" href="/public/media/media.css">
+
+
+<section>
+  <div class="backButton">
+    <a href="/adm">< Voltar</a>
+  </div>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ID do Funcionário</th>
+        <th>Nome</th>
+        <th>Editar</th>
+        <th>Deletar</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each funcionarios}}
+        <tr>
+            <td>{{dataValues.id}}</td>
+            <td>{{dataValues.nome}}</td>
+            <td>
+                <a href="/adm/funcionarios/editar_funcionario/{{dataValues.id}}">&#9999;</a>
+            </td>
+            <td>
+                <a href="/adm/funcionarios/deletar_funcionario/{{dataValues.id}}">&#128465;</a>
+            </td>
+        </tr> 
+    {{/each}}
+    </tbody>
+  </table>
+
+  <div class="novaVendaButton">
+    <a href="/adm/funcionarios/novoFuncionario">Cadastrar Funcionário</a>
+  </div>
+</section>

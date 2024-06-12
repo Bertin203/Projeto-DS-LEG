@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/public/css/cadastrarFuncionario.css">
+<link rel="stylesheet" href="/public/media/media.css">
+
+
+<form action="/adm/funcionarios/novoFuncionario" method="post">
+  <div class="form-group">
+    <label for="email">ID</label>
+    <input type="text" class="form-control" id="id" name="id" value="{{funcionario.dataValues.id}} ">
+  </div>
+  <div class="form-group">
+    <label for="data">Nome</label>
+    <input type="text" class="form-control" placeholder="Informe o nome do funcionário" id="nome" name="nome" value="{{funcionario.dataValues.nome}}">
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
